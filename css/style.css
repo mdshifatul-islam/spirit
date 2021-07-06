@@ -1,0 +1,607 @@
+/*=================================
+             Fonts link 
+===================================*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/*=================================
+             Basic CSS Start
+===================================*/
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a, a:hover, .btn-link:hover{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+button{
+    border-style: none;
+}
+
+.btn.focus, .btn:focus{
+    outline: 0;
+    text-shadow: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+.sec_title h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.sec_title h2 span{
+    font-weight: bold;
+}
+.sec_title img{
+    padding-top: 20px;
+}
+
+/*=================================
+             Basic CSS End
+===================================*/
+
+/*=================================
+             Nav CSS Start
+===================================*/
+#full_nav{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav_logo{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: white !important;
+    font-size: 24px;
+}
+
+.main_nav ul li{
+    padding-left: 28px;
+}
+
+.main_nav ul li a {
+    color: white !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s;
+    position: relative;
+}
+
+.main_nav ul li a::after{
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    top: 100%;
+    left: 50%;
+    border-bottom: 2px solid transparent;
+    z-index: 99;
+    transition: 0.5s;
+}
+.main_nav ul li a::before{
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    top: 100%;
+    right: 50%;
+    border-bottom: 2px solid transparent;
+    z-index: 99;
+    transition: 0.5s;
+}
+.main_nav ul li a:hover::before{
+    width: 50%;
+    border-bottom: 2px solid #ffffff85;
+}
+.main_nav ul li a:hover::after{
+    width: 50%;
+    border-bottom: 2px solid #fcac45;
+}
+.navbar-toggler-icon{
+    color: #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=================================
+             Nav CSS End
+===================================*/
+
+/*=================================
+             Banner CSS Start
+===================================*/
+
+#full_banner{
+    height: 100vh;
+    background: url(../img/pexels-janko-ferlic-687501.jpg) left top no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#full_banner::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+.banner_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.banner_heading{
+    color: #999999;
+    font-size: 44px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.banner_heading span{
+    color: #fcac45;
+    font-size: 44px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.banner_para{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.banner_para span{
+    font-weight: bold;
+}
+.banner_arrow{
+    color: #ffffff !important;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+.banner_arrow .fa-arrow-down{
+    font-size: 18px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    text-align: center;
+    line-height: 50px;
+    transition: 0.5s;
+    color: #ffffff;
+}
+.banner_arrow .fa-arrow-down:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/*=================================
+             Banner CSS End
+===================================*/
+
+/*=================================
+             About CSS Start
+===================================*/
+#full_about{
+    padding: 100px 0;
+}
+.about_content h2{
+    color: #636363;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+.about_content h3{
+    color: #000000;
+    font-size: 34px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 0;
+}
+.about_content h3::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    width: 25%;
+    height: 0;
+    border: 2px solid #fcac45;
+}
+.about_content h3 span{
+    font-weight: bold;
+}
+.about_content p{
+    color: #6c6c6c;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px 0;
+}
+.about_content ul li{
+    color: #5a5a5a;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.about_content ul li span{
+    font-weight: 400;
+    font-style: italic;
+}
+.about_content ul li i{
+    color: #6c6c6c;
+    font-style: 18px;
+}
+.about_btn{
+    color: #616161;
+    font-size: 16px;
+    border: 1px solid #616161;
+    padding: 17px 22px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.about_btn i {
+    padding-right: 5px;
+}
+.about_btn::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: -1;
+    transition: 0.6s;
+}
+.about_btn:hover::before{
+    height: 300px;
+    width: 300px;
+    background: #616161;
+}
+.about_btn:hover{
+    color: white;
+    transform: scale(1.1);
+    border: 1px solid transparent;
+}
+/*=================================
+             About CSS End
+===================================*/
+/*=================================
+             Team CSS Start
+===================================*/
+
+#full_team{
+    padding: 100px 0;
+    background-color: #070707;
+}
+.team_title{
+    text-align: center;
+    color: #ffffff;
+}
+.team_item{
+    text-align: center;
+    color: #ffffff;
+}
+.team_item img{
+    padding-top: 90px;
+    display: inline-block;
+}
+.team_item h4{
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 23px;
+}
+.team_item h5{
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding-bottom: 30px;
+    padding-top: 5px;
+}
+.team_item p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+ul.slick-dots{
+    text-align: center;
+}
+ul.slick-dots li{
+    display: inline-block;
+    padding: 98px 13px 0 13px;
+}
+ul.slick-dots li button{
+    color: transparent;
+    height: 9px;
+    width: 9px;
+    background-color: #ffffff;
+}
+.slick-active button{
+    background-color: #fcac45 !important;
+}
+
+/*=================================
+             Team CSS End
+===================================*/
+
+/*=================================
+             Service CSS Start
+===================================*/
+
+#full_service{
+    padding: 100px 0;
+}
+.serv_title{
+    color: #222222;
+    text-align: center;
+}
+.sec_title p{
+    padding: 42px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.serv_item{
+    text-align: center;
+    padding-top: 64px;
+}
+.serv_item i{
+    font-size: 55px;
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    border: 7px solid #fcac45;
+    text-align: center;
+    line-height: 125px;
+}
+.serv_item h4{
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #222222;
+    padding: 25px 0 15px 0;
+}
+.serv_item p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #222222;
+}
+/*=================================
+             Service CSS End
+===================================*/
+
+/*=================================
+             Client CSS End
+===================================*/
+
+#full_client{
+    padding: 100px 0;
+    background: #000;
+}
+.client_title{
+    color: #fff;
+    text-align: center;
+}
+.client_box{
+    padding-top: 98px;
+}
+.client_pic{
+    text-align: center;
+}
+
+/*=================================
+             Client CSS End
+===================================*/
+
+/*=================================
+             Work CSS End
+===================================*/
+
+#full_work{
+    padding: 100px 0;
+}
+.work_type_list{
+    text-align: right;
+}
+.workhead{
+    margin: 45px 0;
+}
+.work_type_list li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #6c6c6c;
+    padding: 0 15px;
+    border-left: 1px solid #6c6c6c;
+    transition: 0.5s;
+}
+.work_type_list li:first-child{
+    border-style: none;
+}
+.work_type_list li:hover{
+    cursor: pointer;
+    color: #222222;
+    font-weight: bold;
+}
+.work_item{
+    padding-bottom: 30px;
+}
+.work_type h5{
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #222222;
+    font-size: 18px;
+}
+.mixitup-control-active{
+    color: #222222;
+    font-weight: bold;
+}
+/*=================================
+             Work CSS End
+===================================*/
+
+/*=================================
+             Testimonial CSS End
+===================================*/
+
+#full_test{
+    padding: 100px 0;
+    background-color: #000;
+}
+.test_title{
+    color: #ffffff;
+    text-align: center;
+}
+.test_all{
+    text-align: center;
+}
+.test_item p{
+    font-size: 18px;
+    color: #e7e7e7;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding: 100px 0 50px 0;
+}
+.test_item h6{
+    font-size: 18px;
+    color: #e7e7e7;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.test_item h6 span{
+    font-weight: 300;
+}
+
+/*=================================
+             Testimonial CSS End
+===================================*/
+
+/*=================================
+             Contact CSS End
+===================================*/
+
+#full_contact{
+    padding: 100px 0;
+}
+.contact_all .name_box{
+    float: left;
+}
+.contact_all .mail_box{
+    float: right;
+}
+.contact_all .name_box, .contact_all .mail_box{
+    width: calc(100% / 2 - 20px);
+}
+.contact_all .input_box input{
+    height: 40px;
+    width: 100%;
+}
+#msg{
+    height: 165px;
+    width: 100%;
+}
+.submit_box{
+    text-align: right;
+}
+.form_submit{
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    padding: 13px 60px;
+    background: #fcac45;
+    border-radius: 0;
+    margin-top: 30px;
+    border: 2px solid transparent;
+}
+.form_submit:hover{
+    color: #fcac45;
+    border: 2px solid #fcac45;
+    background: transparent;
+}
+/*=================================
+             Contact CSS End
+===================================*/
+
+/*=================================
+             Footer CSS Start
+===================================*/
+#full_footer{
+    padding: 30px 0;
+    background: #000;
+}
+.footer_text{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    color: #b2b2b2;
+}
+.footer_text span{
+    font-weight: 800;
+}
+.footer_icon{
+    text-align: right;
+    color: #b2b2b2;
+}
+.footer_icon i{
+    font-size: 16px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 2px solid #b2b2b2;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 30px;
+    transition: 0.5s;
+    color: #b2b2b2;
+}
+.footer_icon i:hover{
+    background-color: #b2b2b2;
+    color: #000;
+    cursor: pointer;
+}
+/*=================================
+             Footer CSS End
+===================================*/
